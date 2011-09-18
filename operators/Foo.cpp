@@ -1,12 +1,25 @@
 #include "Foo.h"
+#include "Name.h"
 #include <iostream>
 
-void doExplicit(){
+void basic_explicit(){
   Foo foo(10);
-  std::cout << foo.get() << std::endl;
+  cout << foo.get() << endl;
 }
 
-void doImplicit(){
+void basic_implicit(){
   Foo foo(10);
-  std::cout << foo << std::endl;
+  cout << foo << endl;
+}
+
+void customtype_implicit(){
+  Name name("hello world");
+  cout << name << endl;
+}
+
+int main(int argc, char** argv){
+   basic_explicit();
+   basic_implicit();
+   customtype_implicit();
+   return 0;
 }

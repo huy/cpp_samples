@@ -1,3 +1,3 @@
-%: %.cpp
-	g++44 -std=c++0x -o $@ $<
-all: simple1 simple2 simple
+%.bin: %.cpp
+	clang -std=c++0x -o $@ $<
+all: simple1.bin simple2.bin simple.bin
