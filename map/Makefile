@@ -1,2 +1,2 @@
-word_counter: word_counter.cc
-	g++ word_counter.cc -o$@
+word_counter.bin: word_counter.cc
+	clang word_counter.cc -o$@ -lstdc++
