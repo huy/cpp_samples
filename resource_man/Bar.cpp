@@ -23,5 +23,5 @@ void test_auto_release(){
 }
 
 int main(int argc,char** argv) {
-  test_auto_release(); 
+   Bar bar;
 }
