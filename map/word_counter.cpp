@@ -8,13 +8,13 @@ typedef map<string,int> WordMap;
 typedef pair<string,int> WordFreq;
 
 void add_word_option1(WordMap& word_map,const string& word){
-    WordMap::const_iterator it = word_map.find(word);
+    WordMap::iterator it = word_map.find(word);
     if( it == word_map.end() ){
+        cout << "add " << word << endl;
         word_map.insert(WordFreq(word,1));
     } else {
-        word_map.erase(it->first);
-        cout << "erase ok" << endl;
-        word_map.insert(WordFreq(word,it->second+1));
+        cout << "update " << word << endl;
+        it->second++;
     }
 }
 
